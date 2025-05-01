@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: task
+  datasource:
+    url: jdbc:postgresql://localhost:5432/java-developer-task
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
+      continue-on-error: true
+      data-locations: classpath:init_data.sql
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+
+server:
+  port: 8085
+
+security:
+  jwt:
+    secret: ZXJ0dm55ZXBydGl2YXlqc2tocmxrc2hhZjtrZXJhc29pZ2hmamtmanNmc2Zsa2psa2R1Z2VydG9pY2FsamRzZmlhdmpzZXRpbHNqdmR1c2lnaXRkcmx0dnN2c2FkZw==
+    access: 3600000
+    refresh: 2592000000
+
