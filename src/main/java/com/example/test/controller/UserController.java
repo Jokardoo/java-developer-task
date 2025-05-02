@@ -28,7 +28,7 @@ public class UserController {
         return userToDtoMapper.userToShortInfo(userService.getById(id));
     }
 
-    @PostMapping("/update/{id}")
+    @PatchMapping("/update/{id}")
     public UserDto updateUser(@PathVariable(name = "id") Long id, @RequestBody @Validated UserDto userDto) {
 
         User updatedUser = userService.update(id, userToDtoMapper.toModel(userDto));
