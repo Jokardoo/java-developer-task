@@ -1,0 +1,50 @@
+POST
+http://localhost:8085/api/auth/register
+
+{
+    "name":"John",
+    "secondName":"Doe",
+    "password":"john",
+    "birthday":"1975-01-01",
+    "email":"john@doe.ru",
+    "patronymic":"unknown",
+    "phoneNumber":"89027773427"
+}
+
+
+
+!! поля username в тз не было, вместо него использовал номер телефона. для админа в поле phoneNumber вводится admin как исключительный случай !!
+
+POST
+http://localhost:8085/api/auth/login
+
+{
+    "phoneNumber":"admin",
+    "password":"admin"
+}
+
+GET
+http://localhost:8085/api/users/contact-info/{id}
+
+
+GET
+http://localhost:8085/api/users/{id}
+
+
+DELETE
+http://localhost:8085/api/users/{id}
+
+
+PATCH
+http://localhost:8085/api/users/update/{id}
+!! Передавать все поля необязательно !!
+
+{
+    "name":"value",
+    "secondName":"value",
+    "password":"value",
+    "birthday":"yyyy-MM-dd",
+    "email":"value",
+    "patronymic":"value",
+    "phoneNumber":"value"
+}
