@@ -1,3 +1,3 @@
+INSERT INTO users (email, name, password, phone_number, role, second_name)
+VALUES ('admin@admin.com', 'admin', '$2a$10$2R.khL3DIkW5pnHrpJc4meyx6caZerj6fEgCjpa7kZ0iH9JecFq8O', 'admin', 'ROLE_ADMIN', 'admin');
 
-            INSERT INTO users (email, name, password, phone_number, role, second_name)
-            VALUES ('admin@admin.com', 'admin', '$2a$10$2R.khL3DIkW5pnHrpJc4meyx6caZerj6fEgCjpa7kZ0iH9JecFq8O', 'admin', 'ROLE_ADMIN', 'admin');

@@ -34,8 +34,8 @@ public class UserDto {
     @NotNull(message = "Phone number should not be empty!", groups = OnCreate.class)
     @NotBlank(message = "Phone number should not be empty!", groups = OnCreate.class)
     private String phoneNumber;
-
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+//
+//    @JsonProperty(access = JsonProperty.Access.)
     @NotNull(message = "Password should not be empty!", groups = OnCreate.class)
     @NotBlank(message = "Password should not be blank!", groups = OnCreate.class)
     private String password;

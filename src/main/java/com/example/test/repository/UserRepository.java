@@ -1,6 +1,5 @@
 package com.example.test.repository;
 
-import com.example.test.domain.user.User;
 import com.example.test.domain.user.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -15,5 +14,8 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
     boolean existsByPhoneNumber(String phoneNumber);
 
     UserEntity save(UserEntity user);
+
+    void deleteByPhoneNumber(String phoneNumber);
+
 
 }
